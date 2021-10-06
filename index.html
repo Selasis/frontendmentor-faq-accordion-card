@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css?family=Kumbh+Sans:regular,700&Display=swap" rel="stylesheet" />
+  
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+</head>
+<body>
+
+  <div class="page">
+    <div class="card">
+      <div class="card__container">
+        <div class="card__body">
+          <div class="card__image--box"><img class="box" src="./images/illustration-box-desktop.svg" alt=""></div>
+          <div class="card__column">
+            <div class="card__image">
+              
+              
+              <img class="pattern" src="./images/bg-pattern-desktop.svg" alt="">
+              <img class="pattern-mob" src="./images/bg-pattern-mobile.svg" alt="">
+              <img class="woman" src="./images/illustration-woman-online-desktop.svg" alt="">
+            </div>
+          </div>
+          <div class="card__column">
+            <h1 class="card__title">FAQ</h1>
+            <div class="card__accordion">
+              <div class="acc-item">
+                <div class="acc-item__header">
+                  <div class="acc-item__title">
+                    How many team members can I invite?
+                  </div>
+                  <div class="acc-item__icon"><img src="./images/icon-arrow-down.svg" alt=""></div>
+                </div>
+                <div class="acc-item__description">
+                  You can invite up to 2 additional users on the Free plan. There is no limit on 
+                  team members for the Premium plan.
+                </div>
+              </div>
+              <div class="acc-item">
+                <div class="acc-item__header">
+                  <div class="acc-item__title">
+                    What is the maximum file upload size?
+                  </div>
+                  <div class="acc-item__icon"><img src="./images/icon-arrow-down.svg" alt=""></div>
+                </div>
+                <div class="acc-item__description">
+                  No more than 2GB. All files in your account must fit your allotted storage space.
+                </div>
+              </div>
+              <div class="acc-item">
+                <div class="acc-item__header">
+                  <div class="acc-item__title">
+                    How do I reset my password?
+                  </div>
+                  <div class="acc-item__icon"><img src="./images/icon-arrow-down.svg" alt=""></div>
+                </div>
+                <div class="acc-item__description">
+                  Click “Forgot password” from the login page or “Change password” from your profile page.
+  A reset link will be emailed to you.
+                </div>
+              </div>
+              <div class="acc-item">
+                <div class="acc-item__header">
+                  <div class="acc-item__title">
+                    Can I cancel my subscription?
+                  </div>
+                  <div class="acc-item__icon"><img src="./images/icon-arrow-down.svg" alt=""></div>
+                </div>
+                <div class="acc-item__description">
+                  Yes! Send us a message and we’ll process your request no questions asked.
+                </div>
+              </div>
+              <div class="acc-item">
+                <div class="acc-item__header">
+                  <div class="acc-item__title">
+                    Do you provide additional support?
+                  </div>
+                  <div class="acc-item__icon"><img src="./images/icon-arrow-down.svg" alt=""></div>
+                </div>
+                <div class="acc-item__description">
+                  Chat and email support is available 24/7. Phone lines are open during normal business hours.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="app.js"></script> 
+</html>
+
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Kumbh Sans";
+    color: hsl(238, 29%, 16%);
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(145deg, rgba(175,103,233,1) 0%, rgba(101,101,231,1) 100%);
+    padding: 10px;
+  }
+
+.page { }
+.card { }
+.card__container { 
+  min-width: 850px;
+  max-width: 1000px;
+}
+.card__body { 
+  display: flex;
+  background-color: #fff;
+  border-radius: 15px;
+  height: 480px;
+  position: relative;
+
+}
+.card__column { 
+  flex: 0 1 50%;
+  overflow: hidden;
+  padding: 25px 25px 0px 0px;
+}
+.card__column:last-child {
+  padding: 55px 0px;
+}
+.card__image--box {
+  position: absolute;
+  z-index: 1;
+  top: 180px;
+  left: -94px;
+}
+.card__image {
+  position: relative;
+  margin: 0px 0px 0px -100px;
+}
+
+.woman { 
+  width: 450px;
+  top: 30px;
+  left: 25px;
+}
+.pattern { 
+  width: 912px;
+  right: 40px;
+  top: -300px;
+}
+.pattern-mob {
+  display: none;
+}
+.box { }
+
+.card__image img {
+  position: absolute;
+}
+.card__title { 
+  font-size: 30px;
+  font-weight: 700;
+  align-self: flex-start;
+}
+.card__accordion { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 25px 85px 0px 0px;
+}
+.acc-item { 
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+  padding: 10px 0px;
+  transition: max-height 0.2s ease-in-out;
+}
+.acc-item__header {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.acc-item__title { 
+  font-size: 15px;
+  font-weight: 400;
+}
+.acc-item__title:hover {
+  color:hsl(14, 88%, 65%)
+}
+.active .acc-item__title {
+  font-weight: 700;
+}
+.acc-item__icon {
+
+}
+.acc-item__icon img{
+  transition: transform 0.25s ease-in-out;
+}
+.active img{
+  transform: rotate(180deg);
+}
+
+.acc-item__description {
+  font-size: 12px;
+  color:hsl(238, 29%, 16%);
+  transition: all 0.25s ease-in-out;
+  opacity: 0;
+  height: auto;
+  max-height: 0;
+  margin-top: 10px;
+  overflow: hidden;
+  width: 90%;
+  letter-spacing: 0.3px;
+}
+.active > .acc-item__description {
+  opacity: 1;
+  height: auto;
+  max-height: 100px;
+  overflow: hidden;
+}
+
+
+@media (max-width: 768px) {
+  .card__container {
+    min-width: auto;
+    max-width: 520px;
+  }
+
+  .pattern {
+    display: none;
+  }
+  .pattern-mob {
+    display: block;
+    top: -20px;
+    left: -15px;
+  }
+  .card__column {
+    flex: 0 1 20%;
+    overflow: visible;
+  }
+  .card__column:last-child {
+    flex: 0 1 80%;
+    padding: 15px 20px;
+    margin-top: 25px;
+  }
+  .card__accordion {
+    padding: 0;
+  }
+  .card__body {
+    flex-direction: column;
+    height: 520px;
+    max-height: 600px;
+    justify-content: center;
+    align-items: center;
+  }
+  .card__title {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .card__image--box {
+    position: relative;
+  }
+  .woman {
+    width: 250px;
+    top: -137px;
+    left: -20px;
+  }
+  .box {
+    position: absolute;
+    width: 90px;
+    z-index: 1;
+    bottom: 128px;
+    right: -55px;
+  }
+  .acc-item__title:hover {
+    color: hsl(238, 29%, 16%);
+  }
+}
+</style>
